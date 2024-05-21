@@ -1,0 +1,20 @@
+many to many
+-----------------------
+
+>>> from myapp2.models import * 
+>>> s1=Student.objects.create(name='yash',age=22)
+>>> c1=Course.objects.create(course_name='python')
+
+>>> c1.students.add(s1) 
+
+>>> c2=Course.objects.create(course_name='Django')
+
+>>> c2.students.add(s1) 
+
+
+one to one:
+-------------
+
+
+>>> a1=Adhaar.objects.create()
+>>> p1=Person.objects.create(name='akash',adhaar=a1)
